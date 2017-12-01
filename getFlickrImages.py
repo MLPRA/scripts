@@ -9,9 +9,9 @@ from requests.exceptions import ConnectionError
 import uuid # Import UUID to generate a unique ID for a file
 import normalizer # Import NORMALIZER to create a valid directory name
 
-# Set these here or using flickr.API_KEY in your application
-api_key = unicode('4100274d3fc7c99578898653b192c9ba')
-api_secret = unicode('4690e48a0d17ff6c')
+# Requirements: set environment variables
+api_key    = unicode( os.getenv('API_KEY') )
+api_secret = unicode( os.getenv('API_SECRET') )
 
 flickr = flickrapi.FlickrAPI(api_key, api_secret)
 
